@@ -1,95 +1,68 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+import { ComplexInput } from "@/components/ChakraUI_Integrated_Components/ComplexInput";
+import { Input } from "@/components/ChakraUI_Integrated_Components/Input";
+import { SubmitButton } from "@/components/ChakraUI_Integrated_Components/SubmitButton";
+import { Form } from "@/components/ReactHookForm_Integrated_Components/Form";
+import {
+  Center,
+  Flex,
+  InputGroup,
+  InputLeftAddon,
+  Text,
+  Input as ChakraInput,
+} from "@chakra-ui/react";
 
 export default function Home() {
+  const onSubmit = (data: any) => {
+    console.log("data", data);
+  };
+
+  const onError = (errors: any) => {
+    console.log("errors", errors);
+  };
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <Center as="main" flexDir={"column"} gap={"24px"}>
+      <Text>
+        this project is for creating infrastructure needed for integrated chakra
+        ui, react hook form, and react query and axios
+      </Text>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <Form onValid={onSubmit} onInvalid={onError}>
+        <Flex maxW={"300px"} flexDir={"column"} gap={"12px"}>
+          <Input
+            name="name"
+            rules={{
+              required: { value: true, message: "this field is required" },
+              minLength: {
+                value: 4,
+                message: "length must be at least 4",
+              },
+            }}
+            placeholder="name"
+            variant={"flushed"}
+            focusBorderColor="crimson"
+            errorBorderColor="pink.400"
+          />
+          <ComplexInput
+            name="phone number"
+            rules={{
+              required: { value: true, message: "this field is required" },
+              minLength: {
+                value: 4,
+                message: "length must be at least 4",
+              },
+            }}
+            render={(field, methods) => (
+              <InputGroup>
+                <InputLeftAddon>+234</InputLeftAddon>
+                <ChakraInput {...field} type="tel" placeholder="phone number" />
+              </InputGroup>
+            )}
+          />
+          <SubmitButton />
+        </Flex>
+      </Form>
+    </Center>
   );
 }
