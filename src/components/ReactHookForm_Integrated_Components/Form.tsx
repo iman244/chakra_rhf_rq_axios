@@ -12,14 +12,20 @@ export const Form = (props: {
   children: any;
   onValid?: SubmitHandler<FieldValues>;
   onInvalid?: SubmitErrorHandler<FieldValues>;
+  defaultValues?: any
 }) => {
-  const methods = useForm();
+  const { defaultValues } = props
+  const methods = useForm({defaultValues});
   return (
     <FormProvider {...methods}>
       <form
         onSubmit={methods.handleSubmit(
-          props.onValid ? props.onValid : () => {},
-          props.onInvalid
+          props.onValid ? props.onValid : (data: any) => {
+            console.log("data", data);
+          },
+          props.onInvalid ? props.onInvalid : (errors: any) => {
+            console.log("errors", errors);
+          }
         )}
       >
         {props.children}

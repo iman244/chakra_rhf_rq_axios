@@ -1,13 +1,10 @@
-import { Input as ChakraInput, InputProps } from "@chakra-ui/react";
-import {
-
-  UseControllerProps,
-} from "react-hook-form";
+import { Checkbox as ChakraCheckbox, CheckboxProps } from "@chakra-ui/react";
+import { UseControllerProps } from "react-hook-form";
 import { ComplexInput } from "./ComplexInput";
 
-export type IntegratedInputProps = InputProps & UseControllerProps;
+type IntegratedCheckBoxProps = CheckboxProps & UseControllerProps;
 
-export const Input = (props: IntegratedInputProps) => {
+export const Checkbox = (props: IntegratedCheckBoxProps) => {
   const {
     name,
     rules,
@@ -18,6 +15,8 @@ export const Input = (props: IntegratedInputProps) => {
     ...rest
   } = props;
 
+  // console.log("defaultValue", name, defaultValue)
+
   const controllerProps = {
     name,
     rules,
@@ -27,11 +26,13 @@ export const Input = (props: IntegratedInputProps) => {
     control,
   };
 
+  console.log("we are in checkbox");
+
   return (
     <ComplexInput
       {...controllerProps}
       render={(field, methods) => (
-        <ChakraInput
+        <ChakraCheckbox
           isInvalid={!!methods.formState.errors[name]}
           {...field}
           {...rest}

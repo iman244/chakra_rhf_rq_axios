@@ -28,6 +28,8 @@ export const ComplexInput = (props: ComplexIntegratedInputProps) => {
     render,
   } = props;
 
+  console.log("defaultValue", name, defaultValue)
+
   return (
     <ConnectForm>
       {(methods) => {
