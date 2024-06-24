@@ -6,6 +6,7 @@ import {
   Flex,
   Checkbox as ChakraCheckbox,
   Stack,
+  Heading,
 } from "@chakra-ui/react";
 import { Checkbox } from "../ChakraUI_Integrated_Components/Checkbox";
 import { ComplexInput } from "../ChakraUI_Integrated_Components/ComplexInput";
@@ -19,6 +20,10 @@ export const CheckBoxForm = () => {
       }}
     >
       <Flex flexDir={"column"} gap={"12px"}>
+        <Heading size={"lg"} borderBottom={"1px solid gray"}>
+          Checkbox Form
+        </Heading>
+
         <Checkbox
           spacing="1rem"
           size="lg"

@@ -4,9 +4,9 @@ import {
 } from "react-hook-form";
 import { ComplexInput } from "./ComplexInput";
 
-export type IntegratedInputProps = PinInputProps & UseControllerProps & { _container?: BoxProps };
+export type Integrated_PinInputProps = PinInputProps & UseControllerProps & { _container?: BoxProps };
 
-export const PinInput = (props: IntegratedInputProps) => {
+export const PinInput = (props: Integrated_PinInputProps) => {
   const {
     name,
     rules,

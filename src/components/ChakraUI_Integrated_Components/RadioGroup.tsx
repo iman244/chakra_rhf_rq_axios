@@ -1,10 +1,13 @@
-import { Checkbox as ChakraCheckbox, CheckboxProps } from "@chakra-ui/react";
+import {
+  RadioGroup as ChakraRadioGroup,
+  RadioGroupProps,
+} from "@chakra-ui/react";
 import { UseControllerProps } from "react-hook-form";
 import { ComplexInput } from "./ComplexInput";
 
-type Integrated_CheckBoxProps = CheckboxProps & UseControllerProps;
+export type Integrated_RadioGroupProps = RadioGroupProps & UseControllerProps;
 
-export const Checkbox = (props: Integrated_CheckBoxProps) => {
+export const RadioGroup = (props: Integrated_RadioGroupProps) => {
   const {
     name,
     rules,
@@ -12,6 +15,7 @@ export const Checkbox = (props: Integrated_CheckBoxProps) => {
     defaultValue,
     disabled,
     control,
+    children,
     ...rest
   } = props;
 
@@ -28,11 +32,9 @@ export const Checkbox = (props: Integrated_CheckBoxProps) => {
     <ComplexInput
       {...controllerProps}
       render={(field, methods) => (
-        <ChakraCheckbox
-          isInvalid={!!methods.formState.errors[name]}
-          {...field}
-          {...rest}
-        />
+        <ChakraRadioGroup {...field} {...rest}>
+          {children}
+        </ChakraRadioGroup>
       )}
     />
   );

@@ -5,9 +5,9 @@ import {
 } from "react-hook-form";
 import { ComplexInput } from "./ComplexInput";
 
-export type IntegratedInputProps = InputProps & UseControllerProps;
+export type Integrated_InputProps = InputProps & UseControllerProps;
 
-export const Input = (props: IntegratedInputProps) => {
+export const Input = (props: Integrated_InputProps) => {
   const {
     name,
     rules,

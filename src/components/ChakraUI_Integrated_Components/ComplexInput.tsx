@@ -8,16 +8,16 @@ import {
   UseFormReturn,
 } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
-import { IntegratedInputProps } from "./Input";
+import { Integrated_InputProps } from "./Input";
 
 type render = (
   field: ControllerRenderProps<FieldValues, string>,
   methods: UseFormReturn<FieldValues, any, undefined>
 ) => React.ReactElement;
 
-type ComplexIntegratedInputProps = UseControllerProps & { render: render };
+type Complex_Integrated_InputProps = UseControllerProps & { render: render };
 
-export const ComplexInput = (props: ComplexIntegratedInputProps) => {
+export const ComplexInput = (props: Complex_Integrated_InputProps) => {
   const {
     name,
     rules,
@@ -27,8 +27,6 @@ export const ComplexInput = (props: ComplexIntegratedInputProps) => {
     control,
     render,
   } = props;
-
-  console.log("defaultValue", name, defaultValue)
 
   return (
     <ConnectForm>

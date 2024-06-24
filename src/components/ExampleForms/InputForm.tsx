@@ -4,6 +4,7 @@ import {
   InputLeftAddon,
   Input as ChakraInput,
   Text,
+  Heading,
 } from "@chakra-ui/react";
 import { Form } from "../ReactHookForm_Integrated_Components/Form";
 import { Input } from "../ChakraUI_Integrated_Components/Input";
@@ -13,8 +14,10 @@ import { SubmitButton } from "../ChakraUI_Integrated_Components/SubmitButton";
 export const InputForm = () => {
   return (
     <Form>
-      <Text w={'fit-content'} mb={'12px'} borderBottom={'1px solid gray'}>Input and complex Input Form</Text>
       <Flex maxW={"300px"} flexDir={"column"} gap={"12px"}>
+        <Heading size={"lg"} borderBottom={"1px solid gray"}>
+          Input and complex Input Form
+        </Heading>
         <Input
           name="name"
           rules={{
