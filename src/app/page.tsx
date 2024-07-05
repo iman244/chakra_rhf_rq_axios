@@ -4,6 +4,8 @@ import { InputForm } from "@/components/ExampleForms/InputForm";
 import { PinForm } from "@/components/ExampleForms/PinForm";
 import { RadioForm } from "@/components/ExampleForms/RadioForm";
 import { SelectForm } from "@/components/ExampleForms/SelectForm";
+import { SwitchForm } from "@/components/ExampleForms/SwitchForm";
+import { TextareaForm } from "@/components/ExampleForms/TextareaForm";
 import { Center, Text, Divider } from "@chakra-ui/react";
 import { Fragment } from "react";
 
@@ -14,6 +16,8 @@ export default function Home() {
     <PinForm />,
     <RadioForm />,
     <SelectForm />,
+    <TextareaForm />,
+    <SwitchForm />,
   ];
 
   return (
