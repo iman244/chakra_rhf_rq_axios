@@ -1,13 +1,13 @@
 import {
-  Switch as ChakraSwitch,
-  SwitchProps,
+  Slider as ChakraSlider,
+  SliderProps,
 } from "@chakra-ui/react";
 import { UseControllerProps } from "react-hook-form";
 import { ComplexInput } from "./ComplexInput";
 
-export type Integrated_SwitchProps = SwitchProps & UseControllerProps;
+export type Integrated_SliderProps = SliderProps & UseControllerProps;
 
-export const Switch = (props: Integrated_SwitchProps) => {
+export const Slider = (props: Integrated_SliderProps) => {
   const {
     name,
     rules,
@@ -15,6 +15,7 @@ export const Switch = (props: Integrated_SwitchProps) => {
     defaultValue,
     disabled,
     control,
+    children,
     ...rest
   } = props;
 
@@ -31,11 +32,13 @@ export const Switch = (props: Integrated_SwitchProps) => {
     <ComplexInput
       {...controllerProps}
       render={(field, methods) => (
-        <ChakraSwitch
+        <ChakraSlider
           isInvalid={!!methods.formState.errors[name]}
           {...field}
           {...rest}
-        />
+        >
+          {children}
+        </ChakraSlider>
       )}
     />
   );

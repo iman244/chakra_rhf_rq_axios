@@ -1,4 +1,4 @@
-import { Input as ChakraInput, Flex, InputProps, Text } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import { ConnectForm } from "../ReactHookForm_Integrated_Components/ConnectForm";
 import {
   Controller,
@@ -8,7 +8,6 @@ import {
   UseFormReturn,
 } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
-import { Integrated_InputProps } from "./Input";
 
 type render = (
   field: ControllerRenderProps<FieldValues, string>,

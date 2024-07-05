@@ -1,4 +1,4 @@
-import { Box, BoxProps, PinInput as ChakraPinInput, PinInputField, PinInputProps } from "@chakra-ui/react";
+import { Box, BoxProps, PinInput as ChakraPinInput, PinInputProps } from "@chakra-ui/react";
 import {
   UseControllerProps,
 } from "react-hook-form";
