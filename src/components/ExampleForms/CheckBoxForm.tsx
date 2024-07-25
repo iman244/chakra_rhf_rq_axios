@@ -1,5 +1,3 @@
-import { Form } from "../ReactHookForm_Integrated_Components/Form";
-import { SubmitButton } from "../ChakraUI_Integrated_Components/SubmitButton";
 import {
   CheckboxGroup,
   Flex,
@@ -7,8 +5,11 @@ import {
   Stack,
   Heading,
 } from "@chakra-ui/react";
-import { Checkbox } from "../ChakraUI_Integrated_Components/Checkbox";
-import { ComplexInput } from "../ChakraUI_Integrated_Components/ComplexInput";
+import { Checkbox } from "@/Integrated_components/ChakraUI/Checkbox";
+import { ComplexInput } from "@/Integrated_components/ChakraUI/ComplexInput";
+
+import { SubmitButton } from "@/Integrated_components/ChakraUI/SubmitButton";
+import { Form } from "@/Integrated_components/ReactHookForm/Form";
 
 export const CheckBoxForm = () => {
   return (

@@ -1,10 +1,7 @@
-import {
-  Flex,
-  Heading,
-} from "@chakra-ui/react";
-import { Form } from "../ReactHookForm_Integrated_Components/Form";
-import { SubmitButton } from "../ChakraUI_Integrated_Components/SubmitButton";
-import { Textarea } from "../ChakraUI_Integrated_Components/Textarea";
+import { Flex, Heading } from "@chakra-ui/react";
+import { Form } from "@/Integrated_components/ReactHookForm/Form";
+import { SubmitButton } from "@/Integrated_components/ChakraUI/SubmitButton";
+import { Textarea } from "@/Integrated_components/ChakraUI/Textarea";
 
 export const TextareaForm = () => {
   return (

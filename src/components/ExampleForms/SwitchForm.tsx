@@ -1,7 +1,7 @@
 import { Flex, Heading } from "@chakra-ui/react";
-import { Form } from "../ReactHookForm_Integrated_Components/Form";
-import { SubmitButton } from "../ChakraUI_Integrated_Components/SubmitButton";
-import { Switch } from "../ChakraUI_Integrated_Components/Switch";
+import { Form } from "@/Integrated_components/ReactHookForm/Form";
+import { SubmitButton } from "@/Integrated_components/ChakraUI/SubmitButton";
+import { Switch } from "@/Integrated_components/ChakraUI/Switch";
 
 export const SwitchForm = () => {
   return (

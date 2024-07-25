@@ -1,7 +1,7 @@
+import { PinInput } from "@/Integrated_components/ChakraUI/PinInput";
+import { SubmitButton } from "@/Integrated_components/ChakraUI/SubmitButton";
+import { Form } from "@/Integrated_components/ReactHookForm/Form";
 import { Flex, Heading, PinInputField } from "@chakra-ui/react";
-import { SubmitButton } from "../ChakraUI_Integrated_Components/SubmitButton";
-import { Form } from "../ReactHookForm_Integrated_Components/Form";
-import { PinInput } from "../ChakraUI_Integrated_Components/PinInput";
 
 export const PinForm = () => {
   return (

@@ -1,7 +1,7 @@
 import { Flex, Heading } from "@chakra-ui/react";
-import { SubmitButton } from "../ChakraUI_Integrated_Components/SubmitButton";
-import { Form } from "../ReactHookForm_Integrated_Components/Form";
-import { Select } from "../ChakraUI_Integrated_Components/Select";
+import { SubmitButton } from "@/Integrated_components/ChakraUI/SubmitButton";
+import { Form } from "@/Integrated_components/ReactHookForm/Form";
+import { Select } from "@/Integrated_components/ChakraUI/Select";
 
 export const SelectForm = () => {
   const options = [

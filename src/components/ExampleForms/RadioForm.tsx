@@ -1,7 +1,7 @@
 import { Flex, Heading, Radio } from "@chakra-ui/react";
-import { SubmitButton } from "../ChakraUI_Integrated_Components/SubmitButton";
-import { Form } from "../ReactHookForm_Integrated_Components/Form";
-import { RadioGroup } from "../ChakraUI_Integrated_Components/RadioGroup";
+import { SubmitButton } from "@/Integrated_components/ChakraUI/SubmitButton";
+import { RadioGroup } from "@/Integrated_components/ChakraUI/RadioGroup";
+import { Form } from "@/Integrated_components/ReactHookForm/Form";
 
 export const RadioForm = () => {
   return (
