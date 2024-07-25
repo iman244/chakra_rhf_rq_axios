@@ -13,7 +13,7 @@ import {
 
 type FormProps = {
   Box_props?: BoxProps;
-  mutation_props: UseMutationOptions<any, AxiosError<any, any>, any, unknown>;
+  mutation_props?: UseMutationOptions<any, AxiosError<any, any>, any, unknown>;
 
   onValid?: SubmitHandler<FieldValues>;
   onInvalid?: SubmitErrorHandler<FieldValues>;

@@ -11,13 +11,15 @@ export const SelectForm = () => {
   ];
   return (
     <Form>
-      <Flex flexDir={"column"} gap={"12px"}>
-        <Heading borderBottom={"1px solid gray"} size={"lg"}>
-          React Select Form
-        </Heading>
-        <Select name="myselect" options={options} />
-        <SubmitButton />
-      </Flex>
+      {({ isLoading }) => (
+        <Flex flexDir={"column"} gap={"12px"}>
+          <Heading borderBottom={"1px solid gray"} size={"lg"}>
+            React Select Form
+          </Heading>
+          <Select name="myselect" options={options} />
+          <SubmitButton isLoading={isLoading} isDisabled={isLoading} />
+        </Flex>
+      )}
     </Form>
   );
 };

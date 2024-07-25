@@ -10,13 +10,15 @@ export const SwitchForm = () => {
         switch: false,
       }}
     >
-      <Flex maxW={"300px"} flexDir={"column"} gap={"12px"}>
-        <Heading size={"lg"} borderBottom={"1px solid gray"}>
-          Switch Form
-        </Heading>
-        <Switch name="switch" colorScheme="red" />
-        <SubmitButton />
-      </Flex>
+      {({ isLoading }) => (
+        <Flex maxW={"300px"} flexDir={"column"} gap={"12px"}>
+          <Heading size={"lg"} borderBottom={"1px solid gray"}>
+            Switch Form
+          </Heading>
+          <Switch name="switch" colorScheme="red" />
+          <SubmitButton isLoading={isLoading} isDisabled={isLoading} />
+        </Flex>
+      )}
     </Form>
   );
 };

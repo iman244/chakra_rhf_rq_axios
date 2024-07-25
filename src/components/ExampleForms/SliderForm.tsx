@@ -16,23 +16,25 @@ export const SliderForm = () => {
         slider: 50,
       }}
     >
-      <Flex maxW={"300px"} flexDir={"column"} gap={"12px"}>
-        <Heading size={"lg"} borderBottom={"1px solid gray"}>
-          Slider Form
-        </Heading>
-        <Slider
-          name="slider"
-          rules={{
-            required: { value: true, message: "this field is required" },
-          }}
-        >
-          <SliderTrack>
-            <SliderFilledTrack />
-          </SliderTrack>
-          <SliderThumb />
-        </Slider>
-        <SubmitButton />
-      </Flex>
+      {({ isLoading }) => (
+        <Flex maxW={"300px"} flexDir={"column"} gap={"12px"}>
+          <Heading size={"lg"} borderBottom={"1px solid gray"}>
+            Slider Form
+          </Heading>
+          <Slider
+            name="slider"
+            rules={{
+              required: { value: true, message: "this field is required" },
+            }}
+          >
+            <SliderTrack>
+              <SliderFilledTrack />
+            </SliderTrack>
+            <SliderThumb />
+          </Slider>
+          <SubmitButton isLoading={isLoading} isDisabled={isLoading} />
+        </Flex>
+      )}
     </Form>
   );
 };

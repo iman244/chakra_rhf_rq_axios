@@ -19,38 +19,40 @@ export const CheckBoxForm = () => {
         test_checkbox: ["naruto", "kakashi"],
       }}
     >
-      <Flex flexDir={"column"} gap={"12px"}>
-        <Heading size={"lg"} borderBottom={"1px solid gray"}>
-          Checkbox Form
-        </Heading>
+      {({ isLoading }) => (
+        <Flex flexDir={"column"} gap={"12px"}>
+          <Heading size={"lg"} borderBottom={"1px solid gray"}>
+            Checkbox Form
+          </Heading>
 
-        <Checkbox
-          spacing="1rem"
-          size="lg"
-          colorScheme="green"
-          defaultChecked
-          name="newsletter"
-        >
-          I want to receive email for new features
-        </Checkbox>
-        <ComplexInput
-          name="test_checkbox"
-          render={(field, methods) => (
-            <CheckboxGroup
-              {...field}
-              colorScheme="green"
-              defaultValue={["naruto", "kakashi"]}
-            >
-              <Stack spacing={[1, 5]} direction={["column", "row"]}>
-                <ChakraCheckbox value="naruto">Naruto</ChakraCheckbox>
-                <ChakraCheckbox value="sasuke">Sasuke</ChakraCheckbox>
-                <ChakraCheckbox value="kakashi">Kakashi</ChakraCheckbox>
-              </Stack>
-            </CheckboxGroup>
-          )}
-        />
-        <SubmitButton />
-      </Flex>
+          <Checkbox
+            spacing="1rem"
+            size="lg"
+            colorScheme="green"
+            defaultChecked
+            name="newsletter"
+          >
+            I want to receive email for new features
+          </Checkbox>
+          <ComplexInput
+            name="test_checkbox"
+            render={(field, methods) => (
+              <CheckboxGroup
+                {...field}
+                colorScheme="green"
+                defaultValue={["naruto", "kakashi"]}
+              >
+                <Stack spacing={[1, 5]} direction={["column", "row"]}>
+                  <ChakraCheckbox value="naruto">Naruto</ChakraCheckbox>
+                  <ChakraCheckbox value="sasuke">Sasuke</ChakraCheckbox>
+                  <ChakraCheckbox value="kakashi">Kakashi</ChakraCheckbox>
+                </Stack>
+              </CheckboxGroup>
+            )}
+          />
+          <SubmitButton isLoading={isLoading} isDisabled={isLoading} />
+        </Flex>
+      )}
     </Form>
   );
 };
