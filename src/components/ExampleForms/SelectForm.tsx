@@ -17,7 +17,9 @@ export const SelectForm = () => {
             React Select Form
           </Heading>
           <Select name="myselect" options={options} />
-          <SubmitButton isLoading={isLoading} isDisabled={isLoading} />
+          <SubmitButton isLoading={isLoading} isDisabled={isLoading}>
+            Submit
+          </SubmitButton>
         </Flex>
       )}
     </Form>

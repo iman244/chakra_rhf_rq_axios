@@ -49,7 +49,9 @@ export const InputForm = () => {
               </InputGroup>
             )}
           />
-          <SubmitButton isLoading={isLoading} isDisabled={isLoading} />
+          <SubmitButton isLoading={isLoading} isDisabled={isLoading}>
+            Submit
+          </SubmitButton>
         </Flex>
       )}
     </Form>

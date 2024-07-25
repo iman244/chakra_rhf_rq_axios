@@ -50,7 +50,9 @@ export const CheckBoxForm = () => {
               </CheckboxGroup>
             )}
           />
-          <SubmitButton isLoading={isLoading} isDisabled={isLoading} />
+          <SubmitButton isLoading={isLoading} isDisabled={isLoading}>
+            Submit
+          </SubmitButton>
         </Flex>
       )}
     </Form>

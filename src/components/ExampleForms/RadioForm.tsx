@@ -18,7 +18,9 @@ export const RadioForm = () => {
               <Radio value="3">3</Radio>
             </Flex>
           </RadioGroup>
-          <SubmitButton isLoading={isLoading} isDisabled={isLoading} />
+          <SubmitButton isLoading={isLoading} isDisabled={isLoading}>
+            Submit
+          </SubmitButton>
         </Flex>
       )}
     </Form>

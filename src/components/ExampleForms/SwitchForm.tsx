@@ -16,7 +16,9 @@ export const SwitchForm = () => {
             Switch Form
           </Heading>
           <Switch name="switch" colorScheme="red" />
-          <SubmitButton isLoading={isLoading} isDisabled={isLoading} />
+          <SubmitButton isLoading={isLoading} isDisabled={isLoading}>
+            Submit
+          </SubmitButton>
         </Flex>
       )}
     </Form>

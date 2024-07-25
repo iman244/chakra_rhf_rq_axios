@@ -23,7 +23,9 @@ export const TextareaForm = () => {
             placeholder="textarea input"
             resize={"both"}
           />
-          <SubmitButton isLoading={isLoading} isDisabled={isLoading} />{" "}
+          <SubmitButton isLoading={isLoading} isDisabled={isLoading}>
+            Submit
+          </SubmitButton>{" "}
         </Flex>
       )}
     </Form>

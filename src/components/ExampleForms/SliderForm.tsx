@@ -32,7 +32,9 @@ export const SliderForm = () => {
             </SliderTrack>
             <SliderThumb />
           </Slider>
-          <SubmitButton isLoading={isLoading} isDisabled={isLoading} />
+          <SubmitButton isLoading={isLoading} isDisabled={isLoading}>
+            Submit
+          </SubmitButton>
         </Flex>
       )}
     </Form>
