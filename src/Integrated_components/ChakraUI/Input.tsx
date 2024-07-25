@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { UseControllerProps } from "react-hook-form";
 import { ComplexInput } from "./ComplexInput";
-import { ErrorMessage } from "@hookform/error-message";
+import { ErrorMessage } from "../ReactHookForm/ErrorMessage";
 
 export type Integrated_InputProps = InputProps &
   UseControllerProps & {
